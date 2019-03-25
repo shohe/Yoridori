@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BXF-aR-SZQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="d9A-Ke-ZCH">
+            <objects>
+                <navigationController storyboardIdentifier="CreateNavigationView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BXF-aR-SZQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pvV-fV-e8c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.49019607840000001" green="0.80784313730000001" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hNV-FO-j3S" kind="relationship" relationship="rootViewController" id="pEC-hj-iHW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fe4-ZA-0Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="-43"/>
+        </scene>
+        <!--Create View Controller-->
+        <scene sceneID="7yf-sJ-e3N">
+            <objects>
+                <viewController id="hNV-FO-j3S" customClass="CreateViewController" customModule="Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kc5-Ab-saJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をやりましたか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cob-fD-t6V">
+                                <rect key="frame" x="111" y="112" width="153" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eal-To-oSK">
+                                <rect key="frame" x="131" y="153" width="113" height="30"/>
+                                <state key="normal" title="00月00日 00:00">
+                                    <color key="titleColor" red="0.92941176470588238" green="0.45490196078431372" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setDate:" destination="hNV-FO-j3S" eventType="touchUpInside" id="FSa-kO-ipA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3Z-do-2uB" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="159.5" y="337.5" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="0FG-Dy-mQ9"/>
+                                    <constraint firstAttribute="width" secondItem="y3Z-do-2uB" secondAttribute="height" multiplier="1:1" id="zwj-GH-D0h"/>
+                                </constraints>
+                                <state key="normal" image="cook"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrY-z0-wtO" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="220.5" y="337.5" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="Sur-gq-kJB"/>
+                                    <constraint firstAttribute="width" secondItem="mrY-z0-wtO" secondAttribute="height" multiplier="1:1" id="nKR-j8-tpE"/>
+                                </constraints>
+                                <state key="normal" image="child"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-jr-ldf" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="98.5" y="337.5" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="IVo-v3-Klc"/>
+                                </constraints>
+                                <state key="normal" image="landly"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhJ-l4-ht5" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="337.5" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="stk-3N-0BK"/>
+                                </constraints>
+                                <state key="normal" image="shopping"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3y-zp-mpR" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="337.5" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R3y-zp-mpR" secondAttribute="height" multiplier="1:1" id="Bz1-4B-WDx"/>
+                                    <constraint firstAttribute="width" constant="56" id="KYY-eE-2Ml"/>
+                                </constraints>
+                                <state key="normal" image="cleaning"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mrY-z0-wtO" firstAttribute="leading" secondItem="y3Z-do-2uB" secondAttribute="trailing" constant="5" id="3aW-Gr-5gs"/>
+                            <constraint firstItem="5nA-jr-ldf" firstAttribute="width" secondItem="5nA-jr-ldf" secondAttribute="height" multiplier="1:1" id="7fG-Ue-UG8"/>
+                            <constraint firstItem="y3Z-do-2uB" firstAttribute="leading" secondItem="5nA-jr-ldf" secondAttribute="trailing" constant="5" id="7oM-9W-Kxd"/>
+                            <constraint firstItem="y3Z-do-2uB" firstAttribute="centerY" secondItem="meh-aY-NxG" secondAttribute="centerY" id="9nz-WU-cTD"/>
+                            <constraint firstItem="IhJ-l4-ht5" firstAttribute="leading" secondItem="mrY-z0-wtO" secondAttribute="trailing" constant="5" id="BaJ-0K-GIa"/>
+                            <constraint firstItem="eal-To-oSK" firstAttribute="top" secondItem="cob-fD-t6V" secondAttribute="bottom" constant="24" id="E0m-FX-Ply"/>
+                            <constraint firstItem="cob-fD-t6V" firstAttribute="top" secondItem="meh-aY-NxG" secondAttribute="top" constant="48" id="EEv-3l-Pdl"/>
+                            <constraint firstItem="IhJ-l4-ht5" firstAttribute="width" secondItem="IhJ-l4-ht5" secondAttribute="height" multiplier="1:1" id="QgU-0z-DCw"/>
+                            <constraint firstItem="mrY-z0-wtO" firstAttribute="centerY" secondItem="y3Z-do-2uB" secondAttribute="centerY" id="RHH-Hi-x0a"/>
+                            <constraint firstItem="5nA-jr-ldf" firstAttribute="leading" secondItem="R3y-zp-mpR" secondAttribute="trailing" constant="5" id="UjR-Nw-GFZ"/>
+                            <constraint firstItem="y3Z-do-2uB" firstAttribute="centerX" secondItem="meh-aY-NxG" secondAttribute="centerX" id="adQ-1M-sID"/>
+                            <constraint firstItem="IhJ-l4-ht5" firstAttribute="centerY" secondItem="mrY-z0-wtO" secondAttribute="centerY" id="bMC-Id-Ddk"/>
+                            <constraint firstItem="cob-fD-t6V" firstAttribute="centerX" secondItem="meh-aY-NxG" secondAttribute="centerX" id="hPB-kS-PbK"/>
+                            <constraint firstItem="eal-To-oSK" firstAttribute="centerX" secondItem="meh-aY-NxG" secondAttribute="centerX" id="iYi-aW-ipr"/>
+                            <constraint firstItem="R3y-zp-mpR" firstAttribute="centerY" secondItem="5nA-jr-ldf" secondAttribute="centerY" id="j0A-0C-NIh"/>
+                            <constraint firstItem="5nA-jr-ldf" firstAttribute="centerY" secondItem="y3Z-do-2uB" secondAttribute="centerY" id="u4p-0Y-5Lv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="meh-aY-NxG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="osu-hX-37t">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BMn-0z-i0y">
+                            <color key="tintColor" red="0.49019607843137253" green="0.80784313725490198" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="back:" destination="hNV-FO-j3S" id="J3A-Wv-lQ7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="childCareButton" destination="mrY-z0-wtO" id="6oR-GV-ud6"/>
+                        <outlet property="cleaningButton" destination="R3y-zp-mpR" id="ehS-h3-3Mz"/>
+                        <outlet property="cookButton" destination="y3Z-do-2uB" id="z1d-ec-nJY"/>
+                        <outlet property="dateButton" destination="eal-To-oSK" id="XjK-cr-76F"/>
+                        <outlet property="landlyButton" destination="5nA-jr-ldf" id="yJ0-qo-BGE"/>
+                        <outlet property="shoppingButton" destination="IhJ-l4-ht5" id="TrC-KV-aYA"/>
+                        <segue destination="TBx-lH-jSI" kind="push" identifier="toSelectHouseWorkViewController" id="pEJ-Gk-fQ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLL-ta-e1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="-44"/>
+        </scene>
+        <!--Select House Work View Controller-->
+        <scene sceneID="gWr-ZZ-kq9">
+            <objects>
+                <viewController storyboardIdentifier="SelectHouseWorkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TBx-lH-jSI" customClass="SelectHouseWorkViewController" customModule="Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hfv-30-BeG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-ja-akM" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                <rect key="frame" x="135.5" y="138" width="104" height="104"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OJV-ja-akM" secondAttribute="height" multiplier="1:1" id="699-Ma-Apl"/>
+                                    <constraint firstAttribute="width" constant="104" id="er9-4J-naw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.49019607840000001" green="0.80784313730000001" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="52"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os8-Qa-WsQ">
+                                <rect key="frame" x="24" y="309.5" width="327" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRp-CN-SvT" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="仕事の内容">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk0-xf-oc5" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="FNz-Di-qpG"/>
+                                        </constraints>
+                                        <state key="normal" title="ごはんを炊く">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dt-fV-mJZ" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="皿を並べる">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRl-jc-Ao6" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="60" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="机を片付ける">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcG-Hy-21J" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="120" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="皿をしまう">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW9-FH-wdt" customClass="BorderButton" customModule="Up" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="159.5" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="皿を洗う">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92941176469999998" green="0.4549019608" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zRp-CN-SvT" firstAttribute="leading" secondItem="Os8-Qa-WsQ" secondAttribute="leading" id="4sH-NU-Khe"/>
+                                    <constraint firstItem="bcG-Hy-21J" firstAttribute="leading" secondItem="eW9-FH-wdt" secondAttribute="trailing" constant="8" id="71f-3f-bVt"/>
+                                    <constraint firstItem="bcG-Hy-21J" firstAttribute="width" secondItem="eW9-FH-wdt" secondAttribute="width" id="CuW-ND-sX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="HRl-jc-Ao6" secondAttribute="trailing" id="CwD-8w-Zwm"/>
+                                    <constraint firstItem="0dt-fV-mJZ" firstAttribute="top" secondItem="zRp-CN-SvT" secondAttribute="bottom" constant="8" id="DFo-go-Pah"/>
+                                    <constraint firstItem="HRl-jc-Ao6" firstAttribute="top" secondItem="gk0-xf-oc5" secondAttribute="bottom" constant="8" id="E4p-et-d8Q"/>
+                                    <constraint firstItem="HRl-jc-Ao6" firstAttribute="height" secondItem="gk0-xf-oc5" secondAttribute="height" id="Ggj-jJ-eZF"/>
+                                    <constraint firstItem="zRp-CN-SvT" firstAttribute="height" secondItem="gk0-xf-oc5" secondAttribute="height" id="I4w-eN-kKC"/>
+                                    <constraint firstItem="0dt-fV-mJZ" firstAttribute="leading" secondItem="Os8-Qa-WsQ" secondAttribute="leading" id="I75-6k-OWt"/>
+                                    <constraint firstAttribute="trailing" secondItem="gk0-xf-oc5" secondAttribute="trailing" id="KEY-mw-65J"/>
+                                    <constraint firstItem="gk0-xf-oc5" firstAttribute="top" secondItem="Os8-Qa-WsQ" secondAttribute="top" id="PVx-ut-HZN"/>
+                                    <constraint firstItem="gk0-xf-oc5" firstAttribute="width" secondItem="zRp-CN-SvT" secondAttribute="width" id="bhm-B2-fme"/>
+                                    <constraint firstItem="eW9-FH-wdt" firstAttribute="height" secondItem="gk0-xf-oc5" secondAttribute="height" id="blL-8B-r2J"/>
+                                    <constraint firstItem="0dt-fV-mJZ" firstAttribute="height" secondItem="gk0-xf-oc5" secondAttribute="height" id="f4p-P8-OIs"/>
+                                    <constraint firstItem="bcG-Hy-21J" firstAttribute="top" secondItem="HRl-jc-Ao6" secondAttribute="bottom" constant="8" id="gP5-cJ-i27"/>
+                                    <constraint firstItem="gk0-xf-oc5" firstAttribute="leading" secondItem="zRp-CN-SvT" secondAttribute="trailing" constant="8" id="gzW-b7-xIB"/>
+                                    <constraint firstItem="eW9-FH-wdt" firstAttribute="leading" secondItem="Os8-Qa-WsQ" secondAttribute="leading" id="hvD-ux-BsR"/>
+                                    <constraint firstAttribute="bottom" secondItem="eW9-FH-wdt" secondAttribute="bottom" id="l1H-JL-qRx"/>
+                                    <constraint firstItem="eW9-FH-wdt" firstAttribute="top" secondItem="0dt-fV-mJZ" secondAttribute="bottom" constant="8" id="mvV-Nb-p3F"/>
+                                    <constraint firstItem="HRl-jc-Ao6" firstAttribute="leading" secondItem="0dt-fV-mJZ" secondAttribute="trailing" constant="8" id="paH-lz-wDm"/>
+                                    <constraint firstAttribute="trailing" secondItem="bcG-Hy-21J" secondAttribute="trailing" id="rXr-8F-yFA"/>
+                                    <constraint firstItem="0dt-fV-mJZ" firstAttribute="width" secondItem="HRl-jc-Ao6" secondAttribute="width" id="ttV-Kx-fc7"/>
+                                    <constraint firstItem="bcG-Hy-21J" firstAttribute="height" secondItem="gk0-xf-oc5" secondAttribute="height" id="wKl-Zc-aBv"/>
+                                    <constraint firstItem="zRp-CN-SvT" firstAttribute="top" secondItem="Os8-Qa-WsQ" secondAttribute="top" id="xbz-v1-Kdv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JTT-J2-qEu" firstAttribute="trailing" secondItem="Os8-Qa-WsQ" secondAttribute="trailing" constant="24" id="C5M-te-WDv"/>
+                            <constraint firstItem="OJV-ja-akM" firstAttribute="centerX" secondItem="JTT-J2-qEu" secondAttribute="centerX" id="d30-Nj-IDN"/>
+                            <constraint firstItem="Os8-Qa-WsQ" firstAttribute="centerY" secondItem="JTT-J2-qEu" secondAttribute="centerY" constant="30" id="dDf-zj-acU"/>
+                            <constraint firstItem="Os8-Qa-WsQ" firstAttribute="leading" secondItem="JTT-J2-qEu" secondAttribute="leading" constant="24" id="hNu-Y5-adq"/>
+                            <constraint firstItem="OJV-ja-akM" firstAttribute="top" secondItem="JTT-J2-qEu" secondAttribute="top" constant="74" id="qcQ-E4-VW8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JTT-J2-qEu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vt5-dJ-DLU"/>
+                    <connections>
+                        <outlet property="houseWorkTypeButton" destination="OJV-ja-akM" id="PMS-Y1-aTG"/>
+                        <outlet property="work01" destination="zRp-CN-SvT" id="cIF-dH-lcD"/>
+                        <outlet property="work02" destination="gk0-xf-oc5" id="znz-Qg-OgR"/>
+                        <outlet property="work03" destination="0dt-fV-mJZ" id="LLI-xI-U7w"/>
+                        <outlet property="work04" destination="HRl-jc-Ao6" id="8kI-2Y-fmE"/>
+                        <outlet property="work05" destination="eW9-FH-wdt" id="E8W-rR-Jx3"/>
+                        <outlet property="work06" destination="bcG-Hy-21J" id="luN-0Z-jmN"/>
+                        <segue destination="Skm-Kj-pom" kind="push" identifier="toSelectFeelingViewController" id="JEZ-3p-NyZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-sr-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="-45.42728635682159"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bR3-0d-1Nb">
+            <objects>
+                <viewController id="Skm-Kj-pom" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vk0-cX-rsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今お疲れですか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-eu-YrF">
+                                <rect key="frame" x="120" y="112" width="135" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks6-Ym-s7z">
+                                <rect key="frame" x="222.5" y="341.5" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ks6-Ym-s7z" secondAttribute="height" multiplier="1:1" id="DDk-40-sP5"/>
+                                    <constraint firstAttribute="width" constant="48" id="wWJ-Ff-1Is"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="happiness"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-ay-ons">
+                                <rect key="frame" x="164.5" y="342.5" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="2Bx-a2-kfe"/>
+                                    <constraint firstAttribute="width" secondItem="gdi-ay-ons" secondAttribute="height" multiplier="1:1" id="Ss7-AN-3O7"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="suspect"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5l-BH-TL6">
+                                <rect key="frame" x="282.5" y="341.5" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="7VN-Lr-DjF"/>
+                                    <constraint firstAttribute="width" secondItem="r5l-BH-TL6" secondAttribute="height" multiplier="1:1" id="kh3-MR-Jpn"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="evil"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BF-yk-tKg">
+                                <rect key="frame" x="106.5" y="342.5" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="HBr-Qb-WI7"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="worried"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e44-rm-vyE">
+                                <rect key="frame" x="48.5" y="342.5" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Xo8-hC-lqa"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="dead"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gdi-ay-ons" firstAttribute="leading" secondItem="7BF-yk-tKg" secondAttribute="trailing" constant="12" id="71e-7v-PGg"/>
+                            <constraint firstItem="gdi-ay-ons" firstAttribute="centerY" secondItem="KWM-Mh-ZzF" secondAttribute="centerY" id="B5k-Bl-4gZ"/>
+                            <constraint firstItem="Ks6-Ym-s7z" firstAttribute="leading" secondItem="gdi-ay-ons" secondAttribute="trailing" constant="12" id="BAG-pi-ehk"/>
+                            <constraint firstItem="7BF-yk-tKg" firstAttribute="leading" secondItem="e44-rm-vyE" secondAttribute="trailing" constant="12" id="Gq0-mv-A4J"/>
+                            <constraint firstItem="1ct-eu-YrF" firstAttribute="top" secondItem="KWM-Mh-ZzF" secondAttribute="top" constant="48" id="He8-5i-SS7"/>
+                            <constraint firstItem="gdi-ay-ons" firstAttribute="centerX" secondItem="KWM-Mh-ZzF" secondAttribute="centerX" id="VYu-EN-Dzr"/>
+                            <constraint firstItem="e44-rm-vyE" firstAttribute="width" secondItem="e44-rm-vyE" secondAttribute="height" multiplier="1:1" id="c1q-0H-0aI"/>
+                            <constraint firstItem="Ks6-Ym-s7z" firstAttribute="centerY" secondItem="gdi-ay-ons" secondAttribute="centerY" id="e7u-GL-Pyb"/>
+                            <constraint firstItem="7BF-yk-tKg" firstAttribute="centerY" secondItem="gdi-ay-ons" secondAttribute="centerY" id="gAM-J9-9zw"/>
+                            <constraint firstItem="1ct-eu-YrF" firstAttribute="centerX" secondItem="KWM-Mh-ZzF" secondAttribute="centerX" id="gbr-jJ-Md1"/>
+                            <constraint firstItem="r5l-BH-TL6" firstAttribute="centerY" secondItem="gdi-ay-ons" secondAttribute="centerY" id="lK5-y6-IcC"/>
+                            <constraint firstItem="7BF-yk-tKg" firstAttribute="width" secondItem="7BF-yk-tKg" secondAttribute="height" multiplier="1:1" id="qA9-DC-Kb4"/>
+                            <constraint firstItem="e44-rm-vyE" firstAttribute="centerY" secondItem="7BF-yk-tKg" secondAttribute="centerY" id="uQB-OF-Djw"/>
+                            <constraint firstItem="r5l-BH-TL6" firstAttribute="leading" secondItem="Ks6-Ym-s7z" secondAttribute="trailing" constant="12" id="yHi-Xe-PYC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KWM-Mh-ZzF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6HH-1D-9dy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzi-Eg-5Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="-45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="child" width="55" height="56"/>
+        <image name="cleaning" width="55" height="56"/>
+        <image name="cook" width="55" height="56"/>
+        <image name="dead" width="46" height="46"/>
+        <image name="evil" width="46" height="46"/>
+        <image name="happiness" width="46" height="46"/>
+        <image name="landly" width="55" height="56"/>
+        <image name="shopping" width="55" height="56"/>
+        <image name="suspect" width="46" height="46"/>
+        <image name="worried" width="46" height="46"/>
+    </resources>
+</document>
